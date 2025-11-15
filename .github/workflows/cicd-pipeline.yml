@@ -76,8 +76,8 @@ deploy:
   runs-on: ubuntu-latest
 
   steps:
-  - name: Deploy to production
-    run: |
-      echo "This is where you would add your deployment script."
-      echo "For example, you could SSH into your server and run 'docker pull' and 'docker run'."
-      echo "Deploying image: ${{ secrets.DOCKERHUB_USERNAME }}/simple-node-app:${{ github.sha }}"
+    - name: Deploy to production
+      run: |
+        echo "This is where you would add your deployment script."
+        echo "For example, you could SSH into your server and run 'docker pull' and 'docker run'."
+        echo "Deploying image: ${{ secrets.DOCKERHUB_USERNAME }}/simple-node-app:${{ github.sha }}"
